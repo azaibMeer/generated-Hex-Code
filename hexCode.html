@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hex Code</title>
+</head>
+<body>
+<button type="button" onclick="generate();" id="btn">click Me</button>
+</body>
+<script>
+	function generate(){
+		//alert("helow world ");
+		var generatedCode = genHexCode();
+		var bodyDetail = document.body;
+		bodyDetail.style.backgroundColor = generatedCode;
+	}
+
+	function genHexCode(){
+		var hex = "#";
+		var hexVal = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F']; 
+		for(var i = 0; i < 6; i++){
+			var genNum = Math.floor(Math.random() * hexVal.length);
+			hex += hexVal[genNum];
+		}
+		return hex;
+	}
+
+console.log(genHexCode());
+	
+	
+
+</script>
+</html>
